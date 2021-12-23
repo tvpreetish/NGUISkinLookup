@@ -50,3 +50,9 @@ var showTab = function (evt, divId) {
 	document.getElementById(divId).style.display = "block";
 	evt.currentTarget.className += " active";
 };
+
+document.addEventListener('readystatechange', event => { 
+    if (event.target.readyState === "complete") {
+        document.getElementById("tabs").firstElementChild.click();;
+    }
+});
